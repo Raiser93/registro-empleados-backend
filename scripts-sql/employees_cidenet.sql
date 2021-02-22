@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `employees`
 --
 
-CREATE TABLE `employees` (
+CREATE TABLE IF NOT EXISTS `employees` (
   `name` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `otherName` varchar(50) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `surname` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,

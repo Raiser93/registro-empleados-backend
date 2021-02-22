@@ -4,11 +4,12 @@ import { EmployeeFactory } from '../models/employee.model';
 export const dbConfig = new Sequelize(
     {
         username: 'root',
-        password: '',
+        password: 'admin',
         database: 'employees_cidenet',
         host: 'localhost',
         dialect: 'mysql',
         port: 3306,
+        logging: false,
     }
 );
 

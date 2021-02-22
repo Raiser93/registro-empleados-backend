@@ -68,7 +68,7 @@ export default class EmployeeControllet {
             res.status(500).json({
                 ok: false,
                 error,
-                message: 'Ocurrio un error al tratar de obtener la lista de empleados'
+                message: 'Ocurrió un error al tratar de obtener la lista de empleados'
             });
         }
     }
@@ -91,7 +91,7 @@ export default class EmployeeControllet {
             res.status(500).json({
                 ok: false,
                 error,
-                message: 'Ocurrio un error al tratar de obtener la lista de empleados'
+                message: 'Ocurrió un error al tratar de obtener la lista de empleados'
             });
         }
     }
@@ -113,7 +113,7 @@ export default class EmployeeControllet {
             res.status(500).json({
                 ok: false,
                 error,
-                message: 'Ocurrio un error al tratar de obtener la lista de empleados'
+                message: 'Ocurrió un error al tratar de obtener la lista de empleados'
             });
         }
     }
@@ -124,11 +124,13 @@ export default class EmployeeControllet {
             const employee =  await Employee.findOne({
                 where: {
                     email,
-                    idType: {
-                        [Op.ne]: idType
-                    },
-                    idNumber: {
-                        [Op.ne]: idNumber
+                    [Op.or]: {
+                        idType: {
+                            [Op.ne]: idType
+                        },
+                        idNumber: {
+                            [Op.ne]: idNumber
+                        }
                     }
                 }
             });
@@ -141,7 +143,7 @@ export default class EmployeeControllet {
             res.status(500).json({
                 ok: false,
                 error,
-                message: 'Ocurrio un error al tratar de obtener la lista de empleados'
+                message: 'Ocurrió un error al tratar de obtener la lista de empleados'
             });
         }
     }
@@ -191,7 +193,7 @@ export default class EmployeeControllet {
             res.status(500).json({
                 ok: false,
                 error,
-                message: 'Ocurrio un error al tratar modificar un empleado'
+                message: 'Ocurrió un error al tratar modificar un empleado'
             });
         }
     }

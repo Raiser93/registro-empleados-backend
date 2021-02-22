@@ -51,14 +51,14 @@ router.post('/create-employee', async (req: Request, res: Response) => {
         } else {
             res.status(400).json({
                 ok: false,
-                message: 'Ocurrio un error al tratar de guardar el empleado'
+                message: 'Ocurrió un error al tratar de guardar el empleado'
             })
         }
     } catch (error) {
         res.status(500).json({
             ok: false,
             error,
-            message: 'Ocurrio un error al tratar de crear un nuevo empleado'
+            message: 'Ocurrió un error al tratar de crear un nuevo empleado'
         });
     }
 });

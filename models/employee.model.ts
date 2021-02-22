@@ -37,7 +37,7 @@ export function EmployeeFactory(sequelize: Sequelize): EmployeeStatic {
             allowNull: false,
             validate: {
                 isEmail: {
-                    msg: 'Dede ingresar un correo valido'
+                    msg: 'Debe ingresar un correo válido'
                 },
             },  
             unique: true
